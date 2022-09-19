@@ -1,2 +1,21 @@
 .L1heading {color: #814141;}
 #L1heading {font-style: italic;}
+
+.L2heading {
+    font-size: 72px;
+    margin-left: 77px;
+}
+
+.L3heading {
+    font-size: 24px;
+    font-family: helvetica;
+    padding-left: 66px;
+    margin-left: 35px;
+    margin-right: 55px;
+    text-indent: -45px;
+    margin-bottom: 70px;
+}
+
+.L3heading B {
+    font-size: 32px;
+}
