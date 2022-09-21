@@ -1,6 +1,15 @@
 .L1heading {color: #814141;}
 #L1heading {font-style: italic;}
 
+.grid {
+    display: grid;
+    gap: 1.5rem;
+
+    padding-block: 2rem;
+    width: min(95%, 70rem);
+    margin-inline: auto;
+}
+
 .L2heading {
     font-size: 72px;
     margin-left: 77px;
@@ -10,12 +19,19 @@
     font-size: 24px;
     font-family: helvetica;
     padding-left: 66px;
-    margin-left: 35px;
-    margin-right: 55px;
+    gap: 35px;
     text-indent: -45px;
     margin-bottom: 70px;
 }
 
 .L3heading B {
     font-size: 32px;
+}
+
+.active a:link {
+    text-decoration: none;
+  }
+
+a:hover {
+text-decoration: underline;
 }
