@@ -1,67 +1,60 @@
+
 body {
     background-color:white;
 }
 
-.active a:link {
-    background-color: none;
-}
-
 nav {
     top: 0px;
-    text-align: center;   
 }
-nav ul {
+nav>ul {
     list-style-type: none;
-    margin: 0;
-    padding: 30px;
+    margin:auto;
+    height:145px;
+    width:95%;
+    padding:0;
+    overflow:hidden;
+    background-color: chartreuse;
+    border-radius: 35px;
 }
 nav>ul li {
-    position: relative; /*we must add a position to our main navigation bar so we can position a drop-down properly */
-    text-align: center;
+    display:inline-block;
     font-weight: bold;
-    display: inline-block;
-    font-size: 23px;
-    font-family: georgia;
-    color:bisque;
-    border: 3px solid bisque;
-    background-color: #5c745c;
-    padding: 15px 15px 15px 15px;
-    border-radius: 10px;
-    width: 150px;
-    list-style-type: none;
-    margin-top: 0;
-    margin-bottom: 5px;
-    margin-inline: 14px;
+    width: 10%;
+    border: 5px solid green;
+    border-radius: 5px;
+    padding: .1%;
+    margin-top: 37px;
+    margin-left: 1%;
 }
-nav a {
+na>a {
+    display: inline-block;
     text-decoration: none;
-    display: inline-block;
-    width: 150px; /*this is important to set so our drop-down doesn't go across the page*/
-    margin: 2px;
     color:bisque;
-
+    width:15px;
+    padding: 0px 0px;
+    text-align: center;    
+    margin:auto;
 }
-nav a:active{
-    color:bisque;
-    display:inline;
 
+nav a:link{
+    background-color:none;
+}
+nav ul li:hover, nav ul li:focus{
+    padding: 20px 20px 20px 20px;
+    background-color: blue;
 }
 nav ul>li ul {
-    position: absolute;
+    list-style-type: inherit;
     display: none;
-    top: 85%;
+    position: absolute;
+    top:100%;
 }
-nav ul ul li {
-    float:none;
-}
+
 nav>ul>li:hover>ul{
-    display: block;
+    display:block;
+    position: absolute;
 }
 
-a:visited {
-    color:bisque;
-
+footer {
+    color: orange;
 }
-
-
-

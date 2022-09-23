@@ -1,37 +1,118 @@
-.L1heading {color: #814141;}
-#L1heading {font-style: italic;}
+h1 {
+    color: bisque;
+    margin-bottom:55px;
+    font-size: 66px;
+    text-align: center;
+}
 
-.grid {
+h2 {
+    margin: 15px;
+    text-align: center;
+    color: greenyellow;
+    font-size: 55px;
+}
+
+body {
+    background-color: black;
+}
+
+p, blockquote, a {
+    color:black;
+}
+
+footer {
+    color:darkred;
+    margin:50px;
+    text-align:center;
+}
+
+.a::first-letter {
+    font-size:1.5rem;
+    font-weight: bold;
+    color: yellow;
+}
+
+.b, .c, .d {
+    text-indent: 25px;
+}
+
+.wrapper {
+    margin: 15px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:100%;
+    margin: 20px;
+    margin-right: 200px;
+
+}
+
+.column {
+    display: flex;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.center {
+    margin:auto;
+    width:50%;
+    border:3px solid green;
+    padding:10px;
+}
+
+.profile {
+    border-radius: 50%;
+    margin: 50px;
+    margin-top: 10px;
+    border: 5px solid#ffffdb;
+}
+
+.container {
     display: grid;
-    gap: 1.5rem;
-
-    padding-block: 2rem;
-    width: min(95%, 70rem);
-    margin-inline: auto;
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: 400px 600px;
+    grid-gap: 10px;
+    justify-content: center;
 }
 
-.L2heading {
-    font-size: 72px;
-    margin-left: 77px;
+.item {
+    background-color: #444;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 20px;
+    justify-content: center;
 }
 
-.L3heading {
-    font-size: 24px;
-    font-family: helvetica;
-    padding-left: 66px;
-    gap: 35px;
-    text-indent: -45px;
-    margin-bottom: 70px;
+.yellow-bold {
+    color: #ffffbd
 }
 
-.L3heading B {
-    font-size: 32px;
+.exp {
+    border-radius: 5px;
+    margin-left: 35px;
 }
 
-.active a:link {
-    text-decoration: none;
-  }
+.section {
+    width: 50%;
+    height: 200px;
 
-a:hover {
-text-decoration: underline;
+    margin-left: 25%;
+    font-size: 18px;
+    color: white;
+}
+
+@media (min-width:600px) {
+    p {
+        font-size: 1.25rem;
+    }
+}
+
+@media (mind-width:800px) {
+    p {
+        font-size: 1.5rem;
+    }
 }
