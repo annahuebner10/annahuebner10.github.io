@@ -16,7 +16,12 @@ body {
     background-color: black;
 }
 
-p, blockquote, a {
+p, blockquote {
+    color:black;
+    margin-left: 40%;
+}
+
+a {
     color:black;
 }
 
