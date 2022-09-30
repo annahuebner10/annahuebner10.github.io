@@ -1,29 +1,129 @@
+@font-face {
+    font-family: SquarePeg;
+    src: url("SquarePeg-Regular.ttf")
+}
+
+/* Print Stylesheet*/
+
+@media print {
+    * {
+        background:transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        font-size: 4pt;
+    }
+    .main-nav,
+    .sidebar,
+    .comments,
+    .main-footer,
+    .img 
+    #wrap {
+        display: none;
+    }
+    .h2 {
+        font-family: Verdana, serif;
+        margin-bottom: 0;
+        border: none;
+        text-align: center;
+    }
+    a[href^="http:"]::after {
+        content: " [" attr(href)"]";
+        color: blue;
+    }
+    @page {
+        margin: 1in;
+    }
+    ul {
+        font-family: Verdana, serif;
+        page-break-after: avoid;
+    }
+    p, ul {
+        font-family: Verdana, serif;
+        orphans: 3;
+        widows: 3;
+        font-size: 11pt;
+        margin: 1in;
+    }
+    blockquote {
+        font-size: 24pt;
+        font-family: SquarePeg;
+    }
+    footer {
+        font-family: Verdana, serif;
+        font-size: 18pt;
+    }
+}
+
 h1 {
-    color: bisque;
+    color: magenta;
     margin-bottom:55px;
     font-size: 66px;
     text-align: center;
 }
 
 h2 {
-    margin: 15px;
-    text-align: center;
-    color: greenyellow;
-    font-size: 55px;
+    color: magenta;
+    font-size: 72pt;
+    padding-left: 10%;
+    margin-bottom: 0px;
+    font-family: SquarePeg;
+}
+
+h3 {
+    font-size:18px;
 }
 
 body {
-    background-color: black;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('watercolor.jpeg');
+}
+
+div {
+    padding: 20px;
+    color:pink;
+}
+
+/* Word content (paragraphs) formatted here: */
+
+main p {
+    font-size: 100%;
+    font-weight:normal;
+    margin-right:16%;
+}
+
+main p:first-child::first-line{
+    font-weight: bold;
+}
+
+main p:first-child::first-letter {
+    font-size: 150%;
+    font-weight: bold;
+}
+
+p {
+    font-size: 100%;
+    font-weight:normal;
+    font-size: 18px;
+    margin-right: 15%;
+}
+
+p:first-child::first-line {
+    text-indent: 20px;
+    font-weight: bold;
 }
 
 p, blockquote {
     color:black;
-    margin-left: 40%;
+    margin-left: 16%;
 }
 
 a {
     color:black;
-}
+} 
 
 footer {
     color:darkred;
@@ -31,93 +131,58 @@ footer {
     text-align:center;
 }
 
-.a::first-letter {
-    font-size:1.5rem;
-    font-weight: bold;
-    color: yellow;
-}
 
-.b, .c, .d {
-    text-indent: 25px;
+.profile {
+    margin-left:10%;
 }
 
 .wrapper {
-    margin: 15px;
-}
-
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width:100%;
-    margin: 20px;
-    margin-right: 200px;
-
-}
-
-.column {
-    display: flex;
-    flex-basis: 100%;
-    flex: 1;
-}
-
-.center {
-    margin:auto;
-    width:50%;
-    border:3px solid green;
-    padding:10px;
-}
-
-.profile {
-    border-radius: 50%;
-    margin: 50px;
-    margin-top: 10px;
-    border: 5px solid#ffffdb;
-}
-
-.container {
     display: grid;
-    grid-template-columns: 400px 400px 400px;
-    grid-template-rows: 400px 600px;
-    grid-gap: 10px;
-    justify-content: center;
+    grid-gap: 1em;
+    grid-template-areas:
+        "header"
+        "sidebar"
+        "content"
+        "sidebar2"
+        "footer"
 }
 
-.item {
-    background-color: #444;
-    color: #fff;
-    font-size: 16px;
-    border-radius: 5px;
-    padding: 20px;
-    justify-content: center;
+/* formatting the contact links at the bottom: */
+
+.contacts {
+    height: 32px;
+    width: 332px;
+    display: inline-flex;
+    padding: 45px;
 }
 
-.yellow-bold {
-    color: #ffffbd
-}
+/* media query's for mobile layout, two columns - still in the works: */
 
-.exp {
-    border-radius: 5px;
-    margin-left: 35px;
-}
-
-.section {
-    width: 50%;
-    height: 200px;
-
-    margin-left: 25%;
-    font-size: 18px;
-    color: white;
-}
-
-@media (min-width:600px) {
+@media (min-width:500px) {
+    .wrapper {
+        grid-template-columns: 20% auto;
+        grid-template-areas: 
+        "header header"
+        "sidebar content"
+        "sidebar 2 sidebar 2"
+        "footer footer";
+    }
     p {
         font-size: 1.25rem;
     }
 }
 
-@media (mind-width:800px) {
+@media (min-width:600px) {
+    .wrapper {
+        grid-gap: 20px;
+        grid-template-columns: 120px auto 120px;
+        grid-template-areas: 
+        "header header header"
+        "sidebar content sidebar 2"
+        "footer footer footer";
+        max-width: 600px;
+    }
     p {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 }
