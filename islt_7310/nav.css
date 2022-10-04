@@ -40,8 +40,15 @@
   
   .navbar li:hover, a:hover {
     background-color: #444444;
+    height: 50px;
     width: 135px;
+    display: inline-block;
+    list-style: none;
+    padding: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
     border-radius: 10px;
+    font: normal bold 13px/1em Arial, Verdana, Helvetica;
   }
   
   .navbar li ul {
@@ -66,13 +73,14 @@
   .navbar li ul li a {
     border-left: 0px solid #444444;
     border-right: 0px solid #444444;
-    border-top: 0px solid #c9d4d8;
+    border-top: -10px solid #c9d4d8;
     border-bottom: 0px solid #444444;
   }
-  
+  /*
   .navbar li ul li a:hover {
     background-color: #a3a1a1;
     position: absolute;
     padding: none;
-    margin: 0;
+    margin-left: -10px;
+    margin-right: 0;
   }

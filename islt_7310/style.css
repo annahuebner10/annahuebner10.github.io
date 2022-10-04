@@ -55,6 +55,8 @@
     }
 }
 
+/* header formats: */
+
 h1 {
     color: magenta;
     margin-bottom:55px;
@@ -74,6 +76,8 @@ h3 {
     font-size:18px;
 }
 
+/*body and div formats:*/
+
 body {
     margin: 0;
     padding: 0;
@@ -92,7 +96,7 @@ div {
 main p {
     font-size: 100%;
     font-weight:normal;
-    margin-right:16%;
+    margin-right:15%;
 }
 
 main p:first-child::first-line{
@@ -121,16 +125,32 @@ p, blockquote {
     margin-left: 16%;
 }
 
+video {
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
 a {
     color:black;
+    font-size: 22px;
+    font-family: 'Poppins', sans-serif;
+}
+
+a:hover {
+    display: none;
+    font-size: 22px;
 } 
+
+.resume {
+    font-family: 'Poppins', sans-serif;
+    margin-left: 40% ;
+}
 
 footer {
     color:darkred;
     margin:50px;
     text-align:center;
 }
-
 
 .profile {
     margin-left:10%;
