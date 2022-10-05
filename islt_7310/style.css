@@ -176,6 +176,16 @@ footer {
     padding: 45px;
 }
 
+/* formatting the Contact form:*/
+
+.formbox {
+    color:blueviolet;
+    width: 300px;
+    height: 270px;
+    margin-left: 35%;
+    margin-bottom: 0px;
+}
+
 /* media query's for mobile layout, two columns - still in the works: */
 
 @media (min-width:500px) {
